@@ -1,0 +1,192 @@
+I can keep note here
+Primitive Types
+
+Exercise 1
+----------
+Identify the data type of the following values:
+
+1. 99.9 = number
+2. "false" = string (because its in quotes"
+3. false = bullion
+4. '0' = string (in single quotes)
+5. 0 = number
+6. true = boolean
+7. 'true' = string
+
+What data type would best represent:
+
+A term or phrase typed into a search box? String
+If a user is logged in? Boolean
+A discount amount to apply to a user's shopping cart? Number
+Whether a coupon code is valid or not? Boolean
+An email address typed into a registration form? String
+The price of a product? Number
+
+
+Exercise 2 (Operators)
+----------------------
+operator : symbols
+expression: statements that result in a single value
+expressions are made up of operators, variables, and literals
+concatenation: adding, combining, joining two literals together
+modulus helps us with odds and evens
+boolean expressions- expressions that result in a boolean
+= assigns
+== compares / boolean
+=== compares strictly
+=== will check value and type
+
+----------------------
+
+Determine the result of the expression:
+
+1. '1' + 2 = '12' (string and add the 2)
+2. typeof '1' + 2 = 'string2' (typeof gives what it is, then we add the 2
+3. 6 % 4 = 2 (4 can go into 6 once with a remainder of 2)
+4.'3 + 4 is ' + 3 + 4 = '3 + 4 is 34'
+5. 0 < 0 = false
+6.'false' == false = false
+7. true == 'true' = false
+8. 5 >= -5 = true
+9. !false || false = true
+10. true || '42' = true
+11. !true && !false = false
+12. 6 % 5 = 1
+13. 5 < 4 && 1 === 1 = False
+14. typeof 'codeup' === 'string' = true
+15'codeup' === 'codeup' && 'codeup' === 'Codeup' = false
+16. 4 >= 0 && 1 !== '1' = true
+17. 6 % 3 === 0 = true
+18. 5 % 2 !== 0 = true
+
+-----------------------------------
+
+Variables
+
+declare a variable
+assign a value
+Const can not be re-assigned
+
+----------------------------------
+
+Working with data types, operators, and variables
+
+-----------------------------------
+
+1.  var a = 1; = 1
+    var b = a++; = 2 (after it is called on again)
+    var c = ++a; = 2
+    // what is the value of a, b, and c? These answers are assuming
+    it is in sequential code
+
+2.var d = "hello";
+  var e = false;
+
+  d++; = NaN
+  e++; = 0
+
+3. Var  perplexed
+    perplexed  + 2 = NaN
+
+4. var price = 2.7;
+    price.toFixed(2) = 2.70
+
+-----------------------------------------------
+
+Word Problems:
+
+1. You have rented some movies for your kids: The little mermaid (for 3 days),
+Brother Bear (for 5 days, they love it),
+and Hercules (1 day, you don't know yet if they're going to like it).
+If price for a movie per day is $3, how much will you have to pay?
+
+var pricePerDay = 3
+var theLittleMermaid = 3
+var broBear = 5
+var herculese = 1
+var totalCost
+totalCost = (theLittleMermaid + broBear + herculese) * pricePerDay
+
+2. Suppose you're working as a contractor for 3 companies: Google, Amazon and
+Facebook, they pay you a different rae per hour. Google pays $400, Amazon $380,
+and Facebook $350. How muh will you receive in payment for this week? You worked
+10 hours for Facebook, 6 hours for Google, and 4 hours for Amazon.
+
+var googleRate = 400
+var amazonRate = 380
+var facebookRate = 350
+var googleHours = 6
+var amazonHours = 4
+var facebookHours = 10
+
+var totalMoneyEarned = (googleRate * googleHours) +
+(amazonRate * amazonHours) + (facebookRate * facebookHours)
+
+3. A student can be enrolled in a class only if the class is not full and the
+class schedule does not conflict with their current schedule.
+
+var noConflicts = true
+var notFull = true
+var canBeEnrolled = noConflicts && notFull
+
+4. A product offer can only be applied if a person buys more than 2 items, and
+the offer has not expired. Premium members do not need to buy a specific amount of
+products.
+
+var boughtMoreThan2 = true
+var boughtTwoOrLess = False
+var notExpired = true
+var expired = false
+var premiumMember = true
+not premiumMember = false
+var productOffer = notExpired && boughtMoreThan2 || premiumMember && notExpired
+
+5. Use the following code to follow the instructions below:
+
+var username = 'codeup'
+var password = 'notastrongpassword'
+
+var username = 'codeup';
+undefined
+var password = 'notastrongpassword';
+undefined
+var atleastFiveChar = true
+undefined
+var lessThanFive = false
+undefined
+var noUsername = true
+undefined
+var usernameFound = false
+undefined
+var userNotMoreThan20 = true
+undefined
+var userExceeds20 = false
+undefined
+var noWhitespace = true
+undefined
+var whitespace = false;
+undefined
+var validUsername = userNotMoreThan20 && noWhitespace;
+undefined
+validUsername
+true
+var validPassword = atleastFiveChar && noUsername && noWhitespace
+undefined
+validPassword
+true
+var validCredentials = validPassword && validUsername
+undefined
+validCredentials
+true
+
+
+
+
+
+
+
+
+
+
+
+
