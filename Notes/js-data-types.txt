@@ -147,37 +147,35 @@ var username = 'codeup'
 var password = 'notastrongpassword'
 
 var username = 'codeup';
-undefined
+
 var password = 'notastrongpassword';
-undefined
+
 var atleastFiveChar = true
-undefined
+
 var lessThanFive = false
-undefined
+
 var noUsername = true
-undefined
+
 var usernameFound = false
-undefined
+
 var userNotMoreThan20 = true
-undefined
+
 var userExceeds20 = false
-undefined
+
 var noWhitespace = true
-undefined
+
 var whitespace = false;
-undefined
+
 var validUsername = userNotMoreThan20 && noWhitespace;
-undefined
-validUsername
-true
+
 var validPassword = atleastFiveChar && noUsername && noWhitespace
-undefined
+
 validPassword
-true
+
 var validCredentials = validPassword && validUsername
-undefined
+
 validCredentials
-true
+
 
 
 
