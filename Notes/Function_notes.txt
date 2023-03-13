@@ -1,0 +1,79 @@
+//keys: function, (), (parameters), {}, ;
+
+// defining a function:
+funciton handleWelcomMessage(){
+// execute functions
+// scope
+// block of code
+}
+
+//create a function that adds 2 numbers
+//define the function
+//add 2 numbers inside the fn
+//create variables that hold 2 numbers
+
+function addTwoNumbers(){
+// return keyword
+// return an output from the function
+// lives at the end of the function block
+// eit the block of code, once something is returned
+return 2+6; // 8
+
+}
+
+console.log(addTwoNumbers());
+
+
+// Parameters/arguments
+// create a function that accepts 2 numbers and returns the sum of those 2 numbers
+// 1. create a function
+// 2. accept 2 numbers
+// 3. add the two numbers
+// 4. return sum
+// 5. execute the function
+// 6. pass in the actual values
+// 7. console.log results
+
+function returnSum(x,y){ // parameters are just placeholders for potential values/data
+       console.log("x: ", x)
+       console.log("y: ", y)
+       return x + y;
+
+};
+
+// execute:
+console.log(returnSum(x: 13, y: 90))
+
+function sum(num1,num2,num3){
+        var  result = num1 * num2 * num3
+        alert('my result is: ' + result);
+        return result;
+}
+
+console.log(alert(multiply(num1: 3, num2: 3, num3 3)))
+
+
+anonymous
+
+var increment = function(x) {
+
+    return x + 1;
+
+};
+var two = increment(x:1);
+
+// args & params examples
+// write a function that accepts the users input and alerts a welcome message with their name
+
+//write a function
+// function accepts 1 parameter (username)
+// alert('welcome user')
+// prompt user from name and store ame in variable
+// execute the function
+
+function sayHello(userName){
+alert('welcome, ' + userName
+var nameInput = prompt("what\'s your name?");
+sayHello(nameInput);
+}
+
