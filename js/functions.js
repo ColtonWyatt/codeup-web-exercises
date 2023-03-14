@@ -13,7 +13,6 @@ function sayHello(name){
     return "Hello " + name
 };
 
-sayHello("Colton");
 console.log(sayHello("Colton"));
 
 /**
@@ -24,8 +23,8 @@ console.log(sayHello("Colton"));
  * console.log 'helloMessage' to check your work
  */
 
-sayHello
-var helloMessage = sayHello("Colt");
+var helloMessage = sayHello('Colt')
+
 
 console.log(helloMessage);
 
@@ -37,7 +36,7 @@ console.log(helloMessage);
  * console.
  */
 
-var myName ="Colton ";
+var myName =" Colton";
 console.log(sayHello(myName));
 
 
@@ -63,12 +62,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-function isTwo(random){
-
-    return random == 2
+function isTwo(num){
+    console.log(num);
+    return num === 2
 
 }
-console.log(isTwo("random"))
+isTwo(random)
+console.log(isTwo(random))
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -88,11 +88,9 @@ console.log(isTwo("random"))
 
 function calculateTip(billTotal, billPercent){
 
-    var billTotal = Number("")
-    var billPercent = Number("")
-    var tipAmount = billTotal * billPercent
+   return billTotal * billPercent
 
-    return tipAmount
+
 }
 
 console.log(calculateTip('', ''))
@@ -140,14 +138,13 @@ var discountPercent = (20)
 
 function applyDiscount(originalPrice, discountPercent)
 {
-    return (originalPrice/100)*discountPercent
+    var discountAmount = discountPercent * originalPrice
+    return originalPrice - discountAmount
+
 }
+console.log(applyDiscount(200, .20))
 
-applyDiscount(200, 20);
-console.log("you saved a total of " + applyDiscount(200, 20)+ ' dollars');
 
-var discountedPrice = originalPrice - applyDiscount(200, 20);
-console.log('Your new total is ' + discountedPrice + ' dollars');
 
 
 
