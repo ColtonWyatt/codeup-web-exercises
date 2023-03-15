@@ -77,3 +77,23 @@ var nameInput = prompt("what\'s your name?");
 sayHello(nameInput);
 }
 
+
+
+var weather = "";
+if (weather > 70){
+    console.log("Bring sunnies");
+} else if(weather > 50 && weather < 70) {
+    console.log (wear sunglasses);
+} else {
+    console.log (stay home);
+}
+
+
+
+var pass = "theSecretPassword"
+var userGuess = prompt("guess the password");
+
+if (userGuess == pass){
+    alert("you are a winner")
+} else {
+    alert("try again next time")
