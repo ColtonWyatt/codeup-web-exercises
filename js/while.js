@@ -12,6 +12,7 @@ var allCones = Math.floor(Math.random() * 50) + 50;
 
 console.log('OK I have to sell ' + allCones);
 
+
 do {var customerCones = Math.floor(Math.random() * 5) +1;
 
 	allCones = allCones - customerCones
@@ -28,6 +29,6 @@ do {var customerCones = Math.floor(Math.random() * 5) +1;
 
 	console.log(allCones + ' cones remaining');
 
-} while (allCones > 0 && allCones > customerCones)
+} while (allCones > 1 && allCones > customerCones)
 console.log(allCones + ' cans sold. YES!! I can finally go home!!!')
 
