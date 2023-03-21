@@ -55,7 +55,22 @@
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-    shoppers.forEach(name => console.log(name))
+    shoppers.forEach(function (shoppers) {
+        var shopperAmount = shoppers.amount
+
+        var discountedPrice = shopperAmount - (shopperAmount * .12)
+        if (shopperAmount < 200) {
+
+            console.log('Name: ' + shoppers.name + "," + ' Shoppers Amount: ' + shoppers.amount)
+
+        } else {
+            console.log('Name: ' + shoppers.name + ',',)
+
+            console.log('Shoppers Total Before Discount: ' + shoppers.amount)
+
+            console.log('Amount After Discount: ' + discountedPrice)
+        }
+    })
 
 
     /** TODO:
@@ -70,6 +85,15 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {bookTitle: '\"The Fall of the House of Usher\" ', firstName: 'Edgar Allan ', lastName: 'Poe'},
+        {bookTitle: '\"It\" ', firstName: 'Stephen', lastName: 'King'},
+        {bookTitle: '\"Hell House\"', firstName: 'Richard', lastName: 'Matheson'},
+        {bookTitle: '\"I am Legend\"', firstName: 'Richard', lastName: 'Matheson'},
+        {bookTitle: '\"The Haunting of Hill House\"', firstName: 'Shirley ', lastName: 'Jackson'}
+    ];
+
 
     /**
      * TODO:
@@ -96,6 +120,13 @@
      *      ...
      */
 
+    books.forEach(function (books, i) {
+        console.log("Book #: " + (i + 1));
+        console.log("Title: " + books.bookTitle);
+        console.log("Author: " + books.firstName + " " + books.lastName);
+        console.log("--------------------")
+    })
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -106,5 +137,22 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+        var createBook = function (title, firstName, lastName) {
+
+    var bookInfo = {
+            title: title,
+            firstName: firstName,
+            lastName: lastName
+        };
+    return bookInfo;
+};
+    function createBook(title, firstName, lastName) {
+        this.title = title
+        this.firstName = firstName
+        this.lastName = lastName
+    }
+
+    console.log(createBook("The Raven", "Stephen", "King"));
 
 })();
