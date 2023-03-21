@@ -13,22 +13,21 @@ var allCones = Math.floor(Math.random() * 50) + 50;
 console.log('OK I have to sell ' + allCones);
 
 
-do {var customerCones = Math.floor(Math.random() * 5) +1;
-
-	allCones = allCones - customerCones
-	console.log(customerCones + ' cone\(s\) sold!');
+do {
+	var customerCones = Math.floor(Math.random() * 5) +1;
+	;
 
 
 		if (customerCones > allCones) {
 
-			console.log("I'm sorry but I only have " + allCones + ' cones left');
-			break;
+			console.log("I'm sorry but I can\'t sell " + customerCones + ' I only have ' + allCones + ' cones left');
+			continue;
 		} else {
+			console.log(customerCones + ' cone\(s\) sold!')
+			allCones = allCones - customerCones
+			console.log(allCones + ' cones remaining');
+		}
 
-	}
-
-	console.log(allCones + ' cones remaining');
-
-} while (allCones > 1 && allCones > customerCones)
-console.log(allCones + ' cans sold. YES!! I can finally go home!!!')
+   } while (allCones > 0)
+			console.log(allCones + ' cones remaining. ' + 'YES!! I can finally go home!!!')
 
