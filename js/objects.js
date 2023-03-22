@@ -59,16 +59,14 @@
         var shopperAmount = shoppers.amount
 
         var discountedPrice = shopperAmount - (shopperAmount * .12)
-        if (shopperAmount < 200) {
 
+        if (shopperAmount < 200) {
             console.log('Name: ' + shoppers.name + "," + ' Shoppers Amount: ' + shoppers.amount)
 
         } else {
             console.log('Name: ' + shoppers.name + ',',)
-
-            console.log('Shoppers Total Before Discount: ' + shoppers.amount)
-
-            console.log('Amount After Discount: ' + discountedPrice)
+            console.log('Shoppers Total Cost Before Discount: ' + shoppers.amount)
+            console.log('Total Cost After Discount: ' + discountedPrice)
         }
     })
 
@@ -146,7 +144,7 @@
             lastName: lastName
         };
     return bookInfo;
-};
+}
     function createBook(title, firstName, lastName) {
         this.title = title
         this.firstName = firstName
