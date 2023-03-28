@@ -1,5 +1,38 @@
 
 .fancy-header {
+    text-align: center;
     color: purple;
     text-decoration: underline;
+}
+
+header{
+    color: darkslategrey;
+    text-decoration-line: underline;
+}
+
+body{
+    background-color: lightgray;
+    font-family: Rockwell;
+}
+
+ul{
+    list-style-type: square;
+}
+
+.phatTable{
+    padding: 20px;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: black;
+}
+
+a:active {
+    color: green;
 }
