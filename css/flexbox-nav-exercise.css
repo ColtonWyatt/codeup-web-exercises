@@ -1,0 +1,91 @@
+
+
+.Main {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar{
+    height: 4em;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: gray;
+    width: 100%;
+}
+
+.list{
+    padding: 2px;
+    display: flex;
+    width: 15em;
+    justify-content: flex-start;
+    align-self: center;
+}
+
+
+.Anchors{
+    margin: auto;
+    padding: 0px;
+    justify-content: space-between;
+    width: 18em;
+    display: flex;
+    list-style: none;
+}
+
+
+.Anchors a{
+    color: black;
+    text-decoration: none;
+    display: flex;
+
+}
+
+.center{
+   width: 40em;
+  justify-content: center;
+
+}
+
+
+.logo{
+    font-family: 'Montserrat', sans-serif;
+
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    display: flex;
+    color: black;
+
+}
+
+.last{
+    flex-direction: row;
+    margin: 0px;
+    width: 10em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons{
+    flex-direction: row;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.icons a{
+    flex-direction: row;
+    padding: 2px;
+    margin: auto;
+    justify-content: space-between;
+    justify-items: center;
+    color: black;
+}
+a:hover{
+    color: blue;
+}
+
