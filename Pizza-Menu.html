@@ -9,7 +9,223 @@
 	<link href="./css/jumbotron.css" rel="stylesheet">
 </head>
 <body>
-<!--Nav Bar-->
+<!--Nav Container Open-->
+<div style="display: flex; align-items: center" class="Nav Div">
+	<!--Navbar Open-->
+	<nav style="width: 100%; display: flex; flex-direction: row">
+		<!--Left Side Navbar Open-->
+		<div style="display: flex" class="left side">
+			<div class="name">
+				<h2 style="width: 6em; margin: auto">Pizza World</h2>
+			</div>
+			<!--Button Open-->
+			<div style="margin: auto; align-items: center; width: 15em" class="links">
+				<button type="button" class="btn">Order Oline</button>
+				<button type="button" class="btn">Menu</button>
+			</div>
+			<!--Button Close-->
+			<!--Zip Open-->
+			<div class="form">
+				<form class="d-flex" role="search">
+					<input style="width: 10em" class="form-control me-2" type="search" placeholder="Zip Code" aria-label="Search">
+					<button style="width: 12em; color: dodgerblue; border: 1px solid dodgerblue; display: flex; margin: auto" class="btn btn-outline-success" type="submit">Find a store near you!</button>
+				</form>
+			</div>
+			<!--Zip Close-->
+		</div>
+		<!--Left Side Navbar Close-->
+		<!--Right Side Open-->
+		<div style=" width: 100%; display: flex; justify-content: flex-end" class="sign up">
+			<button type="button" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+				<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+			</svg>Sign Up!</button>
+		</div>
+		<!--Right Side Close-->
+	</nav>
+	<!--Navbar Close-->
+</div>
+<!--Nav Container Close-->
+<!--Jumbotron Open-->
+<div style="display: flex; flex-direction: column; justify-content: center" class="background-img">
+	<div style="display: flex; width: 100%" class="banner">
+		<h1 style="background-color: white; opacity: 75%; display: flex; justify-content: center; width: 100%" > Welcome to pizza world</h1>
+	</div>
+</div>
+<!--Jumbotron Close-->
+<br>
+<!--Order Menu Open-->
+<div class="customize order">
+	<div>
+		<h2>Build your own pizza!</h2>
+	</div>
+<!--Menu Tabs Open-->
+	<div>
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Size and Crust</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Cheese and Sauce</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Toppings</button>
+			</li>
+		</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+					<div class="card" style="width: 100%;">
+						<div class="card border-secondary mb-3" style="max-width: 100%;">
+							<div style="background: blue; color: white;" class="card-header">Choose Size and Crust</div>
+								<div class="card-body text-secondary">
+									<ul class="list-group">
+										<li style="background: lightgrey" class="list-group-item">Hand Tossed</li>
+										<li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+										<li class="list-group-item">  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+											<label class="form-check-label" for="flexRadioDefault1">
+												Small(10")
+											</label></li>
+										<li class="list-group-item">  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+											<label class="form-check-label" for="flexRadioDefault2">
+												Medium(12")
+											</label></li>
+									</ul>
+								</div>
+								<div>
+									<ul style="padding-left: 1em; padding-right: 1em" class="list-group">
+										<li style="background: lightgrey" class="list-group-item">Crispy Thin</li>
+										<li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+										<li class="list-group-item"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+											<label class="form-check-label" for="flexRadioDefault1">Medium(12")</label></li>
+										<li class="list-group-item">  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+											<label class="form-check-label" for="flexRadioDefault2">
+												Large(14")
+											</label></li>
+									</ul>
+								</div>
+							<br>
+								<div>
+									<footer  style="background: lightgrey; height: 3em; display: flex" >
+										<button style="float: right; margin: auto" class="btn btn-primary me-md-2" type="button">Next Step ></button>
+									</footer>
+								</div>
+						</div>
+					</div>
+				</div>
+
+			<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+				<div class="card" style="width: 100%;">
+					<div class="card border-secondary mb-3" style="max-width: 100%;">
+						<div style="background: blue; color: white;" class="card-header">Cheese and Sauce</div>
+						<div class="card-body text-secondary">
+							<ul class="list-group">
+								<li style="background: lightgrey" class="list-group-item">Cheese</li>
+								<li class="list-group-item">How Much?</li>
+								<li class="list-group-item"><select class="form-select" aria-label="Default select example">
+									<option value="1">Normal</option>
+									<option value="2">Light</option>
+									<option value="3">Extra</option>
+									<option value="4">Double</option>
+								</select></li>
+							</ul>
+						</div>
+						<div>
+							<div class="card-body text-secondary">
+								<ul class="list-group">
+									<li style="background: lightgrey" class="list-group-item">Sauce</li>
+									<li class="list-group-item">What Type?</li>
+									<li class="list-group-item"><select class="form-select" aria-label="Default select example">
+										<option value="1">Tomato</option>
+										<option value="2">Marinara</option>
+										<option value="3">BBQ</option>
+										<option value="4">Alfredo</option>
+									</select></li>
+									<li class="list-group-item">How Much?</li>
+									<li class="list-group-item"><select class="form-select" aria-label="Default select example">
+										<option value="1">Normal</option>
+										<option value="2">Light</option>
+										<option value="3">Extra</option>
+									</select></li>
+								</ul>
+							</div>
+
+						</div>
+							<footer  style="background: lightgrey; height: 4em; display: flex; justify-content: flex-end; flex-direction: column;" >
+								<div style="display: flex; justify-content: flex-end; margin-right: 0; margin-top: .60em; margin-bottom: .60em; ;height: 45px;" class="buttons container">
+									<button style="background: dodgerblue; color: white ;border-bottom-left-radius: 10%; border-top-left-radius: 10%; width: 7em; border: none;">< Previous</button>
+									<button style="background: dodgerblue; color: white ;width: 5em; border: none; border-bottom-right-radius: 10%; border-top-right-radius: 10%;"> Next ></button>
+								</div>
+							</footer>
+						</div>
+					</div>
+			</div>
+			<div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+				<div class="card" style="width: 100%;">
+					<div class="card border-secondary mb-3" style="max-width: 100%;">
+						<div style="background: blue; color: white;" class="card-header">Toppings</div>
+						<br>
+							<div>
+								<ul style="margin-left: 1em; margin-right: 1em" class="list-group">
+									<li style="background: lightgrey" class="list-group-item">Choose Meat</li>
+									<li class="list-group-item">  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+										<label class="form-check-label" for="flexCheckDefault1">
+											Beef
+										</label></li>
+									<li class="list-group-item">  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+										<label class="form-check-label" for="flexCheckDefault2">
+											Ham
+										</label></li>
+									<li class="list-group-item">  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+										<label class="form-check-label" for="flexCheckDefault3">
+											Philly Steak
+										</label></li>
+									<li class="list-group-item">  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+										<label class="form-check-label" for="flexCheckDefault4">
+											Bacon
+										</label></li>
+								</ul>
+								<br>
+							</div>
+							<div>
+								<ul style="margin-left: 1em; margin-right: 1em" class="list-group">
+									<li style="background: lightgrey" class="list-group-item">Choose Non-Meat</li>
+									<li class="list-group-item">  <input class="form-check-input" type="checkbox" value="" id="nonMeats1">
+										<label class="form-check-label" for="nonMeats1">
+											Green Peppers
+										</label></li>
+									<li class="list-group-item">  <input class="form-check-input" type="checkbox" value="" id="nonMeats2">
+										<label class="form-check-label" for="nonMeats2">
+											Mushrooms
+										</label></li>
+									<li class="list-group-item">  <input class="form-check-input" type="checkbox" value="" id="nonMeats3">
+										<label class="form-check-label" for="nonMeats3">
+											Onions
+										</label></li>
+									<li class="list-group-item">  <input class="form-check-input" type="checkbox" value="" id="nonMeats4">
+										<label class="form-check-label" for="nonMeats4">
+											Jalapeño
+										</label></li>
+								</ul>
+								<br>
+
+							</div>
+
+
+
+
+						<footer  style="background: lightgrey; height: 3em; display: flex" >
+							<button style="display: flex ;align-items: center ;float: right; margin: auto" class="btn btn-primary me-md-2" type="button">Check Out <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+								<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+							</svg></button>
+						</footer>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--Menu Tabs Close-->
+</div>
+
+
 
 
 
