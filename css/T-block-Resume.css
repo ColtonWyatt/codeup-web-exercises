@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+
+h4{
+    color: dodgerblue;
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    align-text: center;
+}
+span{
+    color: olivedrab;
+}
+
