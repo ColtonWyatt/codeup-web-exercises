@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Konami Code</title>
+
+</head>
+
+<body>
+<h1 class="header">Konami Code</h1>
+
+<div class="picture">
+
+</div>
+<div class="music">
+
+</div>
+
+
+<script src="./js/jquery-3.6.4.js"></script>
+<script>
+	"use strict";
+
+	$(document).keyup(function(event){
+		console.log(event.keyCode);
+	});
+	var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+	var keys = new Array(code.length);
+
+	$(document).on('keydown', function (event){
+		keys.shift();
+		keys.push(event.which);
+
+
+		if (!keys.some(function (e, i) {return e !== code[i] }))
+			$('head').append("<link href='css/konami.css' rel='stylesheet' type='text/css'>")
+
+	});
+</script>
+
+</body>
+</html>
