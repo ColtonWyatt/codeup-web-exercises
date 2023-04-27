@@ -6,11 +6,17 @@
 
 	<script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 	<style>
 		#map {
 			width: 50em;
 			height: 50em;
+		}
+
+        {
+		"type": "Feature",
+
 		}
 	</style>
 
@@ -21,6 +27,7 @@
 <h1>Mapbox Map</h1>
 
 
+
 <div id='map'></div>
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiY29sdC13eWF0dCIsImEiOiJjbGd5M25od2YwNW5nM3JwaWhzNWNkOGhhIn0.y29jCSBURKDZsdSW0-L-Yw';
@@ -28,8 +35,69 @@
 		container: 'map', // container ID
 		style: 'mapbox://styles/mapbox/satellite-v9', // style URL
 		center: [-84.5762, 34.0095], // starting position [lng, lat]
-		zoom: 20, // starting zoom
+		zoom: 13, // starting zoom
 	});
+
+
+
+
+
+
+
+
+	var restaurants = [{"Name": "Iron Age",
+		"City": "Kennesaw",
+		"Type": "Korean BBQ"},
+		{"Name": "Volcano Sushi",
+			"City": "Kennesaw",
+			"Type": "Hibachi"},
+		{"Name": "Coldstone Creamery",
+			"City": "Kennesaw",
+			"Type": "Desert"}
+
+	]
+
+	restaurants.forEach(function (facts){
+		console.log(facts)
+
+
+
+	var Name = facts.Name
+
+		const markerOne = new mapboxgl.Marker()
+			.setLngLat([-84.5762, 34.0095])
+			.setPopup(new mapboxgl.Popup().setHTML(`<h1 id="name">${Name}</h1>`))
+			.addTo(map);
+
+		const markerTwo = new mapboxgl.Marker()
+			.setLngLat([-84.591520, 34.000040])
+			.setPopup(new mapboxgl.Popup().setHTML('<h1 id="name"></h1>'))
+			.addTo(map);
+
+		const markerThree = new mapboxgl.Marker()
+			.setLngLat([-84.572170, 34.013140])
+			.setPopup(new mapboxgl.Popup().setHTML('<h1 id="name"></h1>'))
+			.addTo(map);
+
+
+
+
+	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 </body>
 </html>
