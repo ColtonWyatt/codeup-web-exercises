@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<title>Weather Map</title>
+
+		<link rel="stylesheet" href="./Weather.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+	           -	      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+		<script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+		<link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet'/>
+		<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+		<link rel='stylesheet'
+	           	      href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css'
+	           	      type='text/css'/>
+
+		<script src="js/keys.js"></script>
+
+
+	</head>
+NEW CODE
+<body style="background: black">
+
+<div class="container">
+		<div class="search">
+			<input type="text" placeholder="Enter City, State, Country" spellcheck="false">
+			<button><img src="img/search.svg"></button>
+		</div>
+	</div>
+
+<div id="firstRow" class="row">
+		<div class="col-6">
+			<div id="cardOne">
+				<video id="video-one" preload="auto" autoplay muted loop>
+					<source id="weatherVid" src="css/cloudy%20clip.mp4" type="video/mp4">
+				</video>
+				<div id="videoMessage" class="styling">
+					<div id="day" class="row">
+						<h5>Today</h5>
+					</div>
+					<div class="weather-image">
+						<img class="weather-icon-one" src="img/cloud-lightning-rain.svg">
+					</div>
+					<h1 class="tempOne"></h1>
+					<h2 class="cityOne"></h2>
+					<div id="statsContainer" class="row">
+						<div id="humidityStats" class="col-6">
+							<p class="humidityPercentageOne">90</p>
+							<img class="humidity-icon" src="./img/water.svg">
+							<p class="humidity">Humidity</p>
+						</div>
+						<div id="windStatsOne" class="col-6">
+							<p class="windOne">10 Mph</p>
+							<img class="wind-icon" src="./img/wind.svg">
+							<p class="windSpeed">Wind Speed</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div id="secondRow" class="row">
+		<div class="col-6">
+			<div id="cardTwo">
+				<video id="video-two" preload="auto" autoplay muted loop>
+					<source id="weatherVidTwo" src="css/cloudy%20clip.mp4" type="video/mp4">
+				</video>
+				<div id="videoMessageTwo" class="styling">
+					<div id="dayTwo" class="row">
+						<h5>Today</h5>
+					</div>
+					<div class="weather-image">
+						<img class="weather-icon-two" src="img/cloud-lightning-rain.svg">
+					</div>
+					<h1 class="tempTwo"></h1>
+					<h2 class="cityTwo"></h2>
+					<div id="statsContainerTwo" class="row">
+						<div id="humidityStatsTwo" class="col-6">
+							<p class="humidityPercentageTwo">90</p>
+							<img class="humidity-icon" src="./img/water.svg">
+							<p class="humidity">Humidity</p>
+						</div>
+						<div id="windStatsTwo" class="col-6">
+							<p class="windTwo">10 Mph</p>
+							<img class="wind-icon" src="./img/wind.svg">
+							<p class="windSpeed">Wind Speed</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div id="cardThree">
+				<video id="video-three" preload="auto" autoplay muted loop>
+					<source id="weatherVidThree" src="css/cloudy%20clip.mp4" type="video/mp4">
+				</video>
+				<div id="videoMessageThree" class="styling">
+					<div id="dayThree" class="row">
+						<h5>Today</h5>
+					</div>
+					<div class="weather-image">
+						<img class="weather-icon-three" src="img/cloud-lightning-rain.svg">
+					</div>
+					<h1 class="tempThree"></h1>
+					<h2 class="cityThree"></h2>
+					<div id="statsContainerThree" class="row">
+						<div id="humidityStatsThree" class="col-6">
+							<p class="humidityPercentageThree">90</p>
+							<img class="humidity-icon" src="./img/water.svg">
+							<p class="humidity">Humidity</p>
+						</div>
+						<div id="windStatsThree" class="col-6">
+							<p class="windThree">10 Mph</p>
+							<img class="wind-icon" src="./img/wind.svg">
+							<p class="windSpeed">Wind Speed</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div id="thirdRow" class="row">
+		<div class="col-6">
+			<div id="cardFour">
+				<video id="video-four" preload="auto" autoplay muted loop>
+					<source id="weatherVidFour" src="css/cloudy%20clip.mp4" type="video/mp4">
+				</video>
+				<div id="videoMessageFour" class="styling">
+					<div id="dayFour" class="row">
+						<h5>Today</h5>
+					</div>
+					<div class="weather-image">
+						<img class="weather-icon-four" src="img/cloud-lightning-rain.svg">
+					</div>
+					<h1 class="tempFour"></h1>
+					<h2 class="cityFour"></h2>
+					<div id="statsContainerFour" class="row">
+						<div id="humidityStatsFour" class="col-6">
+							<p class="humidityPercentageFour">90</p>
+							<img class="humidity-icon" src="./img/water.svg">
+							<p class="humidity">Humidity</p>
+						</div>
+						<div id="windStatsFour" class="col-6">
+							<p class="windFour">10 Mph</p>
+							<img class="wind-icon" src="./img/wind.svg">
+							<p class="windSpeed">Wind Speed</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div id="cardFive">
+				<video id="video-five" preload="auto" autoplay muted loop>
+					<source id="weatherVidFive" src="css/cloudy%20clip.mp4" type="video/mp4">
+				</video>
+				<div id="videoMessageFive" class="styling">
+					<div id="dayFive" class="row">
+						<h5>Today</h5>
+					</div>
+					<div class="weather-image">
+						<img class="weather-icon-five" src="img/cloud-lightning-rain.svg">
+					</div>
+					<h1 class="tempFive"></h1>
+					<h2 class="cityFive"></h2>
+					<div id="statsContainerFive" class="row">
+						<div id="humidityStatsFive" class="col-6">
+							<p class="humidityPercentageFive">90</p>
+							<img class="humidity-icon" src="./img/water.svg">
+							<p class="humidity">Humidity</p>
+						</div>
+						<div id="windStatsFive" class="col-6">
+							<p class="windFive">10 Mph</p>
+							<img class="wind-icon" src="./img/wind.svg">
+							<p class="windSpeed">Wind Speed</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+Map Container
+<div class="map-container">
+		<div id="map"></div>
+	</div>
+
+
+ <script src="./js/jquery-3.6.4.js"></script>
+
+ <script>
+
+ 	"use strict"
+
+ 	const apiKey = "4885904ebdf757d7ee7de1f56167faa8"
+ 	const apiUrl = "http://api.openweathermap.org/data/2.5/forecast"
+
+ 	var weatherOptions = {
+ 		lat: 34.0659,
+ 		lon: -84.6769,
+ 		APPID: apiKey,
+ 		// exclude:'minutely, current, hourly',
+ 		units: 'imperial'
+ 	};
+ 	// Search box and button selectors
+ 	const searchBox = document.querySelector(".search input")
+ 	const searchBtn = document.querySelector(".search button")
+
+ 	// Function to call weather and map
+ 	async function checkWeather(city) {
+ 		const response = await $.get(apiUrl, weatherOptions).done(function (data) {
+ 			console.log(data)
+ 			//Formula to show date and time
+ 			var options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+ 			var firstDay = new Date(data.list[0].dt_txt);
+ 			var secondDay = new Date(data.list[6].dt_txt);
+ 			var thirdDay = new Date(data.list[14].dt_txt);
+ 			var fourthDay = new Date(data.list[22].dt_txt);
+ 			var fifthDay = new Date(data.list[30].dt_txt);
+
+ 			// formula to pull type of weather on specific day
+ 			const weatherArrayOne = data.list[0].weather[0].main
+ 			const weatherArrayTwo = data.list[6].weather[0].main
+ 			const weatherArrayThree = data.list[14].weather[0].main
+ 			const weatherArrayFour = data.list[22].weather[0].main
+ 			const weatherArrayFive = data.list[30].weather[0].main
+ 			// console.log(weatherArrayOne);
+ 			// console.log(weatherArrayTwo);
+ 			// console.log(weatherArrayThree);
+ 			// console.log(weatherArrayFour);
+ 			// console.log(weatherArrayFive);
+ 			//NEW CODE
+ 			const weatherIconOne = document.querySelector(".weather-icon-one")
+ 			const weatherIconTwo = document.querySelector(".weather-icon-two")
+ 			const weatherIconThree = document.querySelector(".weather-icon-three")
+ 			const weatherIconFour = document.querySelector(".weather-icon-four")
+ 			const weatherIconFive = document.querySelector(".weather-icon-five")
+ 			const videoOne = document.querySelector("#video-one")
+ 			const videoTwo = document.querySelector("#video-two")
+ 			const videoThree = document.querySelector("#video-three")
+ 			const videoFour = document.querySelector("#video-four")
+ 			const videoFive = document.querySelector("#video-five")
+ 			// console.log(videoOne);
+ 			// weather formulas to fill in data for card one
+ 			document.querySelector("#day").innerHTML = firstDay;
+ 			document.querySelector(".cityOne").innerHTML = data.city.name;
+ 			document.querySelector(".tempOne").innerHTML = Math.round(data.list[0].main.temp) + "°";
+ 			document.querySelector(".humidityPercentageOne").innerHTML = (data.list[0].main.humidity) + " % ";
+ 			document.querySelector(".windOne").innerHTML = Math.round(data.list[0].wind.speed) + "mph";
+ 			//Weather formulas to fill in data for  card 2
+ 			document.querySelector("#dayTwo").innerHTML = secondDay
+ 			document.querySelector(".cityTwo").innerHTML = data.city.name
+ 			document.querySelector(".tempTwo").innerHTML = Math.round(data.list[1].main.temp) + "°";
+ 			document.querySelector(".humidityPercentageTwo").innerHTML = (data.list[1].main.humidity) + "%"
+ 			document.querySelector(".windTwo").innerHTML = Math.round(data.list[1].wind.speed) + "mph";
+ 			// Weather formulas to fill in data for card Three
+ 			document.querySelector("#dayThree").innerHTML = thirdDay
+ 			document.querySelector(".cityThree").innerHTML = data.city.name
+ 			document.querySelector(".tempThree").innerHTML = Math.round(data.list[2].main.temp) + "°";
+ 			document.querySelector(".humidityPercentageThree").innerHTML = (data.list[2].main.humidity) + "%"
+ 			document.querySelector(".windThree").innerHTML = Math.round(data.list[2].wind.speed) + "mph";
+ 			// Weather formulas to fill in data for card Four
+ 			document.querySelector("#dayFour").innerHTML = fourthDay
+ 			document.querySelector(".cityFour").innerHTML = data.city.name
+ 			document.querySelector(".tempFour").innerHTML = Math.round(data.list[3].main.temp) + "°";
+ 			document.querySelector(".humidityPercentageFour").innerHTML = (data.list[3].main.humidity) + "%"
+ 			document.querySelector(".windFour").innerHTML = Math.round(data.list[3].wind.speed) + "mph";
+ 			// Weather Formulas to fill in data for card Five
+ 			document.querySelector("#dayFive").innerHTML = fifthDay
+ 			document.querySelector(".cityFive").innerHTML = data.city.name
+ 			document.querySelector(".tempFive").innerHTML = Math.round(data.list[4].main.temp) + "°";
+ 			document.querySelector(".humidityPercentageFive").innerHTML = (data.list[4].main.humidity) + "%"
+ 			document.querySelector(".windFive").innerHTML = Math.round(data.list[4].wind.speed) + "mph";
+
+ 			// if/else to change weather icon depending on forecast for day one
+ 			if (weatherArrayOne == "Clouds") {
+ 				weatherIconOne.src = "img/cloud-fill.svg";
+ 			} else if (weatherArrayOne == "Clear") {
+ 				weatherIconOne.src = "img/brightness-high.svg";
+ 			} else if (weatherArrayOne == "Rain") {
+ 				weatherIconOne.src = "img/cloud-rain.svg";
+ 			} else if (weatherArrayOne == "Snow") {
+ 				weatherIconOne.src = "img/cloud-snow-fill.svg"
+ 			};
+
+ 			// if/else to change weather video depending on forecast for day one
+ 			if (weatherArrayOne == "Clear") {
+ 				videoOne.src = "css/light blue sky.mp4"
+ 			} else if (weatherArrayOne == "Clouds") {
+ 				videoOne.src = "css/moving clouds.mp4"
+ 			} else if (weatherArrayOne == "Rain") {
+ 				videoOne.src = "css/light color rain.mp4"
+ 			} else if (weatherArrayOne == 'Snow') {
+ 				videoOne.src = "css/snow.mp4"
+ 			};
+ 			// if/else to change weather icon depending on forecast for day two
+ 			if (weatherArrayTwo == "Clouds") {
+ 				weatherIconTwo.src = "img/cloud-fill.svg"
+ 			} else if (weatherArrayTwo == "Clear") {
+ 				weatherIconTwo.src = "img/brightness-high.svg"
+ 			} else if (weatherArrayTwo == "Rain") {
+ 				weatherIconTwo.src = "./img/cloud-lightning-rain.svg"
+ 			};
+
+ 			// if/else to change weather video depending on forecast for day two
+ 			if (weatherArrayTwo == "Clear") {
+ 				videoTwo.src = "css/light blue sky.mp4"
+ 			} else if (weatherArrayTwo == "Clouds") {
+ 				videoTwo.src = "css/moving clouds.mp4"
+ 			} else if (weatherArrayTwo == "Rain") {
+ 				videoTwo.src = "css/light color rain.mp4"
+ 			} else if (weatherArrayTwo == 'Snow') {
+ 				videoTwo.src = "css/snow.mp4"
+ 			};
+
+ 			// 	// if/else to change weather icon depending on forecast for day three
+ 			if (weatherArrayThree == "Clouds") {
+ 				weatherIconThree.src = "img/cloud-fill.svg"
+ 			} else if (weatherArrayThree == "Clear") {
+ 				weatherIconThree.src = "img/brightness-high.svg"
+ 			} else if (weatherArrayThree == "Rain") {
+ 				weatherIconThree.src = "./img/cloud-lightning-rain.svg"
+ 			};
+
+ 			// if/else to change weather video depending on forecast for day three
+ 			if (weatherArrayThree == "Clear") {
+ 				videoThree.src = "css/light blue sky.mp4"
+ 			} else if (weatherArrayThree == "Clouds") {
+ 				videoThree.src = "css/moving clouds.mp4"
+ 			} else if (weatherArrayThree == "Rain") {
+ 				videoThree.src = "css/light color rain.mp4"
+ 			} else if (weatherArrayThree == 'Snow') {
+ 				videoThree.src = "css/snow.mp4"
+ 			};
+
+ 			// if/else to change weather depending on forecast for day four
+ 			if (weatherArrayFour == "Clouds") {
+ 				weatherIconFour.src = "img/cloud-fill.svg"
+ 			} else if (weatherArrayFour == "Clear") {
+ 				weatherIconFour.src = "img/brightness-high.svg"
+ 			} else if (weatherArrayFour == "Rain") {
+ 				weatherIconFour.src = "./img/cloud-lightning-rain.svg"
+ 			};
+
+ 			// if/else to change weather video depending on forecast for day four
+ 			if (weatherArrayFour == "Clear") {
+ 				videoFour.src = "css/light blue sky.mp4"
+ 			} else if (weatherArrayFour == "Clouds") {
+ 				videoFour.src = "css/moving clouds.mp4"
+ 			} else if (weatherArrayFour == "Rain") {
+ 				videoFour.src = "css/light color rain.mp4"
+ 			} else if (weatherArrayFour == 'Snow') {
+ 				videoFour.src = "css/snow.mp4"
+ 			};
+
+ 			// if/else to change weather depending on forecast for day five
+ 			if (weatherArrayFive == "Clouds") {
+ 				weatherIconFive.src = "img/cloud-fill.svg"
+ 			} else if (weatherArrayFive == "Clear") {
+ 				weatherIconFive.src = "img/brightness-high.svg"
+ 			} else if (weatherArrayFive == "Rain") {
+ 				weatherIconFive.src = "./img/cloud-lightning-rain.svg"
+ 			};
+
+ 			// if/else to change weather video depending on forecast for day five
+ 			if (weatherArrayFive == "Clear") {
+ 				videoFive.src = "css/light blue sky.mp4"
+ 			} else if (weatherArrayFive == "Clouds") {
+ 				videoFive.src = "css/moving clouds.mp4"
+ 			} else if (weatherArrayFive == "Rain") {
+ 				videoFive.src = "css/light color rain.mp4"
+ 			} else if (weatherArrayFive == 'Snow') {
+ 				videoFive.src = "css/snow.mp4"
+ 			};
+ 		});
+ 		// 	Close weather loading
+ 	}
+ 	// MapBox
+ 	mapboxgl.accessToken = 'pk.eyJ1IjoiY29sdC13eWF0dCIsImEiOiJjbGd5M25od2YwNW5nM3JwaWhzNWNkOGhhIn0.y29jCSBURKDZsdSW0-L-Yw';
+ 	var map = new mapboxgl.Map({
+ 		container: 'map',
+ 		style: 'mapbox://styles/mapbox/streets-v11',
+ 		center: [-84.6787, 34.0630],//Acworth, GA
+ 		zoom: 13
+ 	});
+ 	// Mapbox Marker(Set to Acworth, GA
+ 	var marker = new mapboxgl.Marker({
+ 		draggable: true
+ 	})
+ 		.setLngLat({lng: -84.6787, lat: 34.0630}).addTo(map);
+ 	marker.on("dragend", function () {
+ 		var location = marker.getLngLat();
+ 		console.log(marker.getLngLat());
+ 		weatherOptions.lon = location.lng;
+ 		weatherOptions.lat = location.lat;
+ 		checkWeather();
+ 	});
+
+ 	function add_marker(event) {
+ 		var coordinates = event.lngLat;
+
+ 		marker.setLngLat([coordinates.lng, coordinates.lat]).addTo(map);
+ 		console.log(coordinates);
+ 		marker.addTo(map)
+ 	}
+ 	map.on('click', add_marker);
+ </script>
